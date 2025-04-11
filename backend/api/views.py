@@ -32,7 +32,6 @@ class InputDataListCreate(generics.ListCreateAPIView):
                 instance.save()
                 request.session['resume_text'] = text
                 print("📄 Extracted Resume Text:", text)
-
             # ✅ Save session changes
             request.session.modified = True
             request.session.save()
